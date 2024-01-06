@@ -51,12 +51,23 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 header h1 {
     font-size: 3em;
-    margin: 0;
+    margin-bottom: 60px;
+    /* margin-top: -100px; */
+    color: black;
+}
+
+header p {
+    font-size: 1.5em;
+    /* margin-bottom: -20px; */
+}
+header b {
+    letter-spacing: 1px; /* Vergrößert den Abstand zwischen den Buchstaben für bessere Sichtbarkeit */
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Fügt die schwarze Umrandung hinzu */
+    font-size: 1.5em;
 }
 
 main {
@@ -70,13 +81,12 @@ main {
     background: var(--primary-color);
     margin: 20px auto;
     padding: 20px;
-    /* color:green; */
 }
 
 /* Card container */
 .card {
     position: relative;
-    max-width: 400px;
+    max-width: 550px;
 }
 
 /* setting padding based on even or odd */
@@ -148,6 +158,11 @@ main {
     position: relative;
 }
 
+.title_02 {
+    color: white;
+    position: relative;
+}
+
 /* Timeline dot  */
 .title::before {
     content: "";
@@ -165,11 +180,42 @@ main {
 }
 
 /* setting dot to the left if the card is odd */
-.card:nth-child(odd)>.info>.title::before {
+.card:nth-child(odd)> .info > .title::before {
     left: -45px;
 }
 
 /* setting dot to the right if the card is odd */
-.card:nth-child(even)>.info>.title::before {
+.card:nth-child(even)> .info > .title::before {
     right: -45px;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even)>.info>.title_02 {
+    text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd)> .info > .title_02::before {
+    left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even)> .info > .title_02::before {
+    right: -45px;
+}
+
+.circle-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%; /* Rundet die Ecken, um einen Kreis zu erstellen */
+    margin: 20px auto;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.circle-container img {
+    width: 100%; /* Füllt den Container mit dem Bild */
+    height: auto;
+    /*border-radius: 100%; Rundet die Ecken des Bildes, um es im Kreis darzustellen */
 }
