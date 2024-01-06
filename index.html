@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebaleni Hochzeits Landing Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 
 <body>
+
     <head>
         <link rel='stylesheet' type='text/css' href='styles.css'>
     </head>
     <ul>
         <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#ueberuns">Über uns</a></li>
-        <li><a href="#contact">Kontakt</a></li>
         <li><a href="#location">Location</a></li>
         <li><a href="#ablauf">Ablauf</a></li>
         <li><a href="#trauzeugen">Trauzeugen</a></li>
+        <li><a href="#contact">Kontakt</a></li>
         <li><a href="#galerie">Galerie</a></li>
 
 
@@ -35,18 +37,40 @@
     </header>
 
     <main>
-        <section id="ueberuns">
-            <h2>Über uns</h2>
-            <p>Hier kannst du eine kurze Beschreibung über dein Unternehmen oder deine Veranstaltung einfügen.</p>
-        </section>
 
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Du kannst uns unter <a href="mailto:info@example.com">info@example.com</a> erreichen.</p>
-        </section>
         <section id="location">
-            <h2>Location</h2>
-            <p>Beschreibung des Hochzeitsortes...</p>
+            <h2>Freie Trauung & Feier in Wankheim</h2>
+
+            <p>Wir freuen uns euch in der <b>Festscheune in Wankheim</b> bei Tübingen begrüßen zu dürfen! <br> Bitte
+                parkt
+                <b>nicht</b> direkt an der Festscheune, da der Parkplatz für Gäste des Hofcafés reserviert ist.
+            </p>
+            <p>An der Obstwiese gibt es einen Parkplatz, auf dem ihr parken könnt. Ist dieser voll müsst ihr auf
+                Parkplätze im Ort zurück greifen - bitte nicht am Hofcafé parken! Sonst gibt es Ärger &#128521;
+                <br> Der richtige Parkplatz ist in der Karte in <b>rot</b> eingezeichnet. Von dort gelangt ihr ganz
+                einfach zur Wiese der freien Trauung (<b>grün</b>) und zur Festscheune (<b>blau</b>).
+            </p>
+            <p>Adresse für's Navi (Google Maps): <b>Parkplatz Festscheune Wankheim</b></p>
+
+            <div>
+                <div id="map" style="height: 300px;"></div>
+
+                <script>
+                    var map = L.map('map').setView([48.49895, 9.10112], 12);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '© OpenStreetMap contributors'
+                    }).addTo(map);
+                    L.marker([48.49895, 9.10112], { icon: L.divIcon({ className: 'blue-marker' }) }).addTo(map)
+                        .bindPopup('Festscheune Landgut Kemmler');
+
+                    L.marker([48.49990, 9.10354], { icon: L.divIcon({ className: 'red-marker' }) }).addTo(map)
+                        .bindPopup('Parkplatz Landgut Kemmler')
+                        .openPopup();
+
+                    L.marker([48.50083, 9.10491], { icon: L.divIcon({ className: 'green-marker' }) }).addTo(map)
+                        .bindPopup('Obstwiese freie Trauung');
+                </script>
+            </div>
         </section>
 
 
@@ -61,7 +85,8 @@
                         <h2 class="title">15:00 Uhr</h2>
                         <h3 class="title_02">Freie Trauung auf der Obstwiese</h3>
                         <p>Unsere freie Trauung wird bei schönem Wetter auf einer Obstwiesen in Wankheim stattfinden.
-                        Die Wegbeschreibung findet ihr unter Locations. Vergesst bei Sonnenschein eure Sonnebrille und weiteren Sonnenschutz nicht.</p>
+                            Die Wegbeschreibung findet ihr unter Locations. Vergesst bei Sonnenschein eure Sonnebrille
+                            und weiteren Sonnenschutz nicht.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -110,9 +135,31 @@
         <section id="trauzeugen">
             <h2>Trauzeugen</h2>
             <p>Informationen zu den Trauzeugen...</p>
-            <div class="circle-container">
-                <img src="Bilder/Tschulia_02.jfif" alt="Dein Bild">
+            <div class="image-container-trauzeugen">
+                <div class="pic-and-text">
+                    <div class="circle-container">
+                        <img src="Bilder/Tschulia_02.jfif">
+                    </div>
+                    <p><b>Julia</b></p>
+                    <p>&#x2706: ____</p>
+                    <p>&#128231: _____</p>
+                </div>
+                <div class="pic-and-text">
+                    <div class="circle-container">
+                        <img src="">
+                    </div>
+                    <p><b>Yannick</b></p>
+                    <p>&#x2706: ____</p>
+                    <p>&#128231: _____</p>
+                </div>
             </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Wenn ihr Fragen oder ein anderes Anliegen habt könnt ihr uns jederzeit kontaktieren! </p>
+            <p>Kontakt Lena &#x2706: 015786103407</p>
+            <p>Kontakt Sebastian &#x2706: 015778888907</p>
         </section>
 
         <section id="galerie">
