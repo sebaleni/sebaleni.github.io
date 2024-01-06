@@ -64,9 +64,12 @@ header p {
     font-size: 1.5em;
     /* margin-bottom: -20px; */
 }
+
 header b {
-    letter-spacing: 1px; /* Vergrößert den Abstand zwischen den Buchstaben für bessere Sichtbarkeit */
-            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Fügt die schwarze Umrandung hinzu */
+    letter-spacing: 1px;
+    /* Vergrößert den Abstand zwischen den Buchstaben für bessere Sichtbarkeit */
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    /* Fügt die schwarze Umrandung hinzu */
     font-size: 1.5em;
 }
 
@@ -180,12 +183,12 @@ main {
 }
 
 /* setting dot to the left if the card is odd */
-.card:nth-child(odd)> .info > .title::before {
+.card:nth-child(odd)>.info>.title::before {
     left: -45px;
 }
 
 /* setting dot to the right if the card is odd */
-.card:nth-child(even)> .info > .title::before {
+.card:nth-child(even)>.info>.title::before {
     right: -45px;
 }
 
@@ -195,12 +198,12 @@ main {
 }
 
 /* setting dot to the left if the card is odd */
-.card:nth-child(odd)> .info > .title_02::before {
+.card:nth-child(odd)>.info>.title_02::before {
     left: -45px;
 }
 
 /* setting dot to the right if the card is odd */
-.card:nth-child(even)> .info > .title_02::before {
+.card:nth-child(even)>.info>.title_02::before {
     right: -45px;
 }
 
@@ -208,14 +211,46 @@ main {
     width: 150px;
     height: 150px;
     overflow: hidden;
-    border-radius: 50%; /* Rundet die Ecken, um einen Kreis zu erstellen */
-    margin: 20px auto;
+    border-radius: 50%;
+    /* Rundet die Ecken, um einen Kreis zu erstellen */
+    /* margin: 20px; */
     background-color: white;
     border: 3px solid black;
 }
 
 .circle-container img {
-    width: 100%; /* Füllt den Container mit dem Bild */
+    width: 100%;
+    /* Füllt den Container mit dem Bild */
     height: auto;
     /*border-radius: 100%; Rundet die Ecken des Bildes, um es im Kreis darzustellen */
+}
+.pic-and-text{
+    text-align: center;
+}
+
+.red-marker {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.blue-marker {
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.green-marker {
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.image-container-trauzeugen {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
