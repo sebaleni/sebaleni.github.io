@@ -70,6 +70,7 @@ main {
     background: var(--primary-color);
     margin: 20px auto;
     padding: 20px;
+    /* color:green; */
 }
 
 /* Card container */
@@ -92,7 +93,7 @@ main {
     content: "";
     position: absolute;
     width: 50%;
-    border: solid orangered;
+    border: solid black;
 }
 
 /* Setting the border of top, bottom, left */
@@ -136,14 +137,14 @@ main {
     display: flex;
     flex-direction: column;
     background: #333;
-    color: gray;
+    color: white;
     border-radius: 10px;
     padding: 10px;
 }
 
 /* Title of the card */
 .title {
-    color: orangered;
+    color: white;
     position: relative;
 }
 
@@ -155,7 +156,7 @@ main {
     height: 10px;
     background: white;
     border-radius: 999px;
-    border: 3px solid orangered;
+    border: 3px solid black;
 }
 
 /* text right if the card is even  */
