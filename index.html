@@ -10,164 +10,163 @@
 </head>
 
 <body>
+    <div class="site-container">
+        <head>
+            <link rel='stylesheet' type='text/css' href='styles.css'>
+        </head>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#ablauf">Ablauf</a></li>
+            <li><a href="#trauzeugen">Trauzeugen</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#galerie">Galerie</a></li>
 
-    <head>
-        <link rel='stylesheet' type='text/css' href='styles.css'>
-    </head>
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#ablauf">Ablauf</a></li>
-        <li><a href="#trauzeugen">Trauzeugen</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-        <li><a href="#galerie">Galerie</a></li>
 
-
-    </ul>
-    <header>
-        <h1>Lena & Sebastian</h1>
-        <br>
-        <div>
-            <b>15.06.2024</b>
+        </ul>
+        <header id="home">
+            <h1>Lena & Sebastian</h1>
             <br>
-            <br>
-            <b>Wir freuen uns sehr, euch zu unserer Hochzeit einladen zu können!</b>
-
-        </div>
-    </header>
-
-    <main>
-
-        <section id="location">
-            <h2>Freie Trauung & Feier in Wankheim</h2>
-
-            <p>Wir freuen uns euch in der <b>Festscheune in Wankheim</b> bei Tübingen begrüßen zu dürfen! <br> Bitte
-                parkt
-                <b>nicht</b> direkt an der Festscheune, da der Parkplatz für Gäste des Hofcafés reserviert ist.
-            </p>
-            <p>An der Obstwiese gibt es einen Parkplatz, auf dem ihr parken könnt. Ist dieser voll müsst ihr auf
-                Parkplätze im Ort zurück greifen - bitte nicht am Hofcafé parken! Sonst gibt es Ärger &#128521;
-                <br> Der richtige Parkplatz ist in der Karte in <b>rot</b> eingezeichnet. Von dort gelangt ihr ganz
-                einfach zur Wiese der freien Trauung (<b>grün</b>) und zur Festscheune (<b>blau</b>).
-            </p>
-            <p>Adresse für's Navi (Google Maps): <b>Parkplatz Festscheune Wankheim</b></p>
-
             <div>
-                <div id="map" style="height: 300px;"></div>
+                <b>15.06.2024</b>
+                <br>
+                <br>
+                <b>Wir freuen uns sehr, euch zu unserer Hochzeit einladen zu können!</b>
 
-                <script>
-                    var map = L.map('map').setView([48.49895, 9.10112], 12);
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '© OpenStreetMap contributors'
-                    }).addTo(map);
-                    L.marker([48.49895, 9.10112], { icon: L.divIcon({ className: 'blue-marker' }) }).addTo(map)
-                        .bindPopup('Festscheune Landgut Kemmler');
-
-                    L.marker([48.49990, 9.10354], { icon: L.divIcon({ className: 'red-marker' }) }).addTo(map)
-                        .bindPopup('Parkplatz Landgut Kemmler')
-                        .openPopup();
-
-                    L.marker([48.50083, 9.10491], { icon: L.divIcon({ className: 'green-marker' }) }).addTo(map)
-                        .bindPopup('Obstwiese freie Trauung');
-                </script>
             </div>
-        </section>
+        </header>
+
+        <main>
+
+            <section id="location" class="abschnitt">
+                <h2>Freie Trauung & Feier in Wankheim</h2>
+
+                <p>Wir freuen uns euch in der <b>Festscheune in Wankheim</b> bei Tübingen begrüßen zu dürfen! <br> Bitte
+                    parkt
+                    <b>nicht</b> direkt an der Festscheune, da der Parkplatz für Gäste des Hofcafés reserviert ist.
+                </p>
+                <p>An der Obstwiese gibt es einen Parkplatz, auf dem ihr parken könnt. Ist dieser voll müsst ihr auf
+                    Parkplätze im Ort zurück greifen - bitte nicht am Hofcafé parken! Sonst gibt es Ärger &#128521;
+                    <br> Der richtige Parkplatz ist in der Karte in <b>rot</b> eingezeichnet. Von dort gelangt ihr ganz
+                    einfach zur Wiese der freien Trauung (<b>grün</b>) und zur Festscheune (<b>blau</b>).
+                </p>
+                <p>Adresse für's Navi (Google Maps): <b>Parkplatz Festscheune Wankheim</b></p>
+
+                <div>
+                    <div id="map"></div>
+                    <script>
+                        var map = L.map('map').setView([48.49990, 9.10354], 16);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '© OpenStreetMap contributors'
+                        }).addTo(map);
+                        L.marker([48.49895, 9.10112], { icon: L.divIcon({ className: 'blue-marker' }) }).addTo(map)
+                            .bindPopup('Festscheune Landgut Kemmler');
+
+                        L.marker([48.49990, 9.10354], { icon: L.divIcon({ className: 'red-marker' }) }).addTo(map)
+                            .bindPopup('Parkplatz Landgut Kemmler')
+                            .openPopup();
+
+                        L.marker([48.50083, 9.10491], { icon: L.divIcon({ className: 'green-marker' }) }).addTo(map)
+                            .bindPopup('Obstwiese freie Trauung');
+                    </script>
+                </div>
+            </section>
 
 
-        <section id="ablauf">
-            <h2>Ablauf</h2>
-            <p>Unser Ablauf am 15.06.2024:</p>
-        </section>
-        <div class="timeline">
-            <div class="outer">
-                <div class="card">
-                    <div class="info">
-                        <h2 class="title">15:00 Uhr</h2>
-                        <h3 class="title_02">Freie Trauung auf der Obstwiese</h3>
-                        <p>Unsere freie Trauung wird bei schönem Wetter auf einer Obstwiesen in Wankheim stattfinden.
-                            Die Wegbeschreibung findet ihr unter Locations. Vergesst bei Sonnenschein eure Sonnebrille
-                            und weiteren Sonnenschutz nicht.</p>
+            <section id="ablauf" class="abschnitt">
+                <h2>Ablauf</h2>
+                <p>Unser Ablauf am <b>15.06.2024</b>:</p>
+            </section>
+            <div class="timeline">
+                <div class="outer">
+                    <div class="card">
+                        <div class="info">
+                            <h2 class="title">15:00 Uhr</h2>
+                            <h3 class="title_02">Freie Trauung auf der Obstwiese</h3>
+                            <p>Unsere freie Trauung wird bei schönem Wetter auf einer Obstwiesen in Wankheim stattfinden.
+                                Die Wegbeschreibung findet ihr unter Locations. Vergesst bei Sonnenschein eure Sonnebrille
+                                und weiteren Sonnenschutz nicht.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="info">
-                        <h2 class="title">16:00 Uhr</h2>
-                        <h3 class="title_02">Sektempfang auf der Obstwiese</h3>
-                        <p>Im Anschluss an die freie Trauung findet der gemeinsame Sektempfang mit Kuchen und Häppchen
-                            auf der Obstwiese statt.</p>
+                    <div class="card">
+                        <div class="info">
+                            <h2 class="title">16:00 Uhr</h2>
+                            <h3 class="title_02">Sektempfang auf der Obstwiese</h3>
+                            <p>Im Anschluss an die freie Trauung findet der gemeinsame Sektempfang mit Kuchen und Häppchen
+                                auf der Obstwiese statt.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="info">
-                        <h2 class="title">17:00 Uhr</h2>
-                        <h3 class="title_02">Gruppenfotos</h3>
-                        <p>Nach dem Sektempfang möchten wir mit euch Gruppenfotos machen, damit dieser besondere Tag
-                            auch in Fotos festgehalten wird.</p>
+                    <div class="card">
+                        <div class="info">
+                            <h2 class="title">17:00 Uhr</h2>
+                            <h3 class="title_02">Gruppenfotos</h3>
+                            <p>Nach dem Sektempfang möchten wir mit euch Gruppenfotos machen, damit dieser besondere Tag
+                                auch in Fotos festgehalten wird.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="info">
-                        <h2 class="title">18:00 Uhr</h2>
-                        <h3 class="title_02">Eintreffen in der Location</h3>
-                        <p>Nur 350m von der Trauwiese entfernt befindet sich unsere Location in der wir gemeinsam essen
-                            und feiern werden.</p>
+                    <div class="card">
+                        <div class="info">
+                            <h2 class="title">18:00 Uhr</h2>
+                            <h3 class="title_02">Eintreffen in der Location</h3>
+                            <p>Nur 350m von der Trauwiese entfernt befindet sich unsere Location in der wir gemeinsam essen
+                                und feiern werden.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="info">
-                        <h2 class="title">18:30 Uhr</h2>
-                        <h3 class="title_02">Abendessen</h3>
-                        <p>Unser Catering verwöhnt uns mit leckeren Speisen vom Buffet.</p>
+                    <div class="card">
+                        <div class="info">
+                            <h2 class="title">18:30 Uhr</h2>
+                            <h3 class="title_02">Abendessen</h3>
+                            <p>Unser Catering verwöhnt uns mit leckeren Speisen vom Buffet.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="info">
-                        <h2 class="title">22:30 Uhr</h2>
-                        <h3 class="title_02">Party Open End</h3>
-                        <p>Nun kann ordentlich gefeiert und getanzt werden! Wir freuen uns auf eine unvergessliche Party
-                            mit euch! Damit ihr sicher nach Hause kommt wird es einen Shuttle Service nach Reutlingen
-                            und Umgebung geben.</p>
+                    <div class="card">
+                        <div class="info">
+                            <h2 class="title">22:30 Uhr</h2>
+                            <h3 class="title_02">Party Open End</h3>
+                            <p>Nun kann ordentlich gefeiert und getanzt werden! Wir freuen uns auf eine unvergessliche Party
+                                mit euch! Damit ihr sicher nach Hause kommt wird es einen Shuttle Service nach Reutlingen
+                                und Umgebung geben.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <section id="trauzeugen">
-            <h2>Trauzeugen</h2>
-            <p>Informationen zu den Trauzeugen...</p>
-            <div class="image-container-trauzeugen">
-                <div class="pic-and-text">
-                    <div class="circle-container">
-                        <img src="Bilder/Tschulia_02.jfif">
+            <section id="trauzeugen" class="abschnitt">
+                <h2>Trauzeugen</h2>
+                <p>Informationen zu den Trauzeugen...</p>
+                <div class="image-container-trauzeugen">
+                    <div class="pic-and-text">
+                        <div class="circle-container">
+                            <img src="Bilder/Tschulia_02.jfif">
+                        </div>
+                        <p><b>Julia</b></p>
+                        <p>&#x2706: ____</p>
+                        <p>&#128231: _____</p>
                     </div>
-                    <p><b>Julia</b></p>
-                    <p>&#x2706: ____</p>
-                    <p>&#128231: _____</p>
-                </div>
-                <div class="pic-and-text">
-                    <div class="circle-container">
-                        <img src="">
+                    <div class="pic-and-text">
+                        <div class="circle-container">
+                            <img src="">
+                        </div>
+                        <p><b>Yannik</b></p>
+                        <p>&#x2706: ____</p>
+                        <p>&#128231: _____</p>
                     </div>
-                    <p><b>Yannick</b></p>
-                    <p>&#x2706: ____</p>
-                    <p>&#128231: _____</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Wenn ihr Fragen oder ein anderes Anliegen habt könnt ihr uns jederzeit kontaktieren! </p>
-            <p>Kontakt Lena &#x2706: 015786103407</p>
-            <p>Kontakt Sebastian &#x2706: 015778888907</p>
-        </section>
+            <section id="contact" class="abschnitt">
+                <h2>Kontakt</h2>
+                <p>Wenn ihr Fragen oder ein anderes Anliegen habt könnt ihr uns jederzeit kontaktieren! </p>
+                <p>Kontakt Lena &#x2706: 015786103407</p>
+                <p>Kontakt Sebastian &#x2706: 015778888907</p>
+            </section>
 
-        <section id="galerie">
-            <h2>Galerie</h2>
-            <p>Bilder von der Hochzeit...</p>
-        </section>
-    </main>
-
+            <section id="galerie" class="abschnitt">
+                <h2>Galerie</h2>
+                <p>Bilder von der Hochzeit...</p>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>

@@ -3,15 +3,28 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #2d2d2d;
     position: sticky;
     top: 0;
     opacity: 100%;
     z-index: 1
 }
 
+#map {
+    flex: 1;
+    height: 300px;
+    z-index: 0;
+}
 
-li {
+.abschnitt {
+    padding-top: 30px; /* Ändern Sie diesen Wert entsprechend der Höhe Ihrer Navigationsleiste */
+ }
+ 
+.site-container {
+   margin-bottom: 5000px; /* Ändern Sie diesen Wert entsprechend der gewünschten Pixelanzahl */
+}
+
+ li {
     float: left;
 }
 
@@ -24,7 +37,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #636363;
 }
 
 body {
