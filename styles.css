@@ -267,3 +267,8 @@ main {
     justify-content: space-between;
     margin: 20px;
 }
+
+a { 
+    color: #0031c4;
+    text-decoration: none;
+}
