@@ -19,10 +19,6 @@ ul {
 .abschnitt {
     padding-top: 30px; /* Ändern Sie diesen Wert entsprechend der Höhe Ihrer Navigationsleiste */
  }
- 
-.site-container {
-   margin-bottom: 5000px; /* Ändern Sie diesen Wert entsprechend der gewünschten Pixelanzahl */
-}
 
  li {
     float: left;
@@ -184,7 +180,7 @@ main {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: white;
+    background: #9ea897;
     border-radius: 999px;
     border: 3px solid black;
 }
@@ -226,7 +222,7 @@ main {
     border-radius: 50%;
     /* Rundet die Ecken, um einen Kreis zu erstellen */
     /* margin: 20px; */
-    background-color: white;
+    background-color: #9ea897;
     border: 3px solid black;
 }
 

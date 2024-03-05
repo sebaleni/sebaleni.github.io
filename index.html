@@ -10,18 +10,19 @@
 </head>
 
 <body>
-    <div class="site-container">
+    <div >
 
         <head>
             <link rel='stylesheet' type='text/css' href='styles.css'>
         </head>
         <ul>
-            <li><a class="active" href="#home">Home</a></li>
+            <!-- <li><a class="active" href="#home">Home</a></li> -->
             <li><a href="#location">Location</a></li>
-            <li><a href="#ablauf">Ablauf</a></li>
-            <li><a href="#trauzeugen">Trauzeugen</a></li>
+            <li><a href="#adressen">Adressen</a></li>
+            <li><a href="#ablauf">Tagesablauf</a></li>
+            <li><a href="#trauzeugen">Unsere Trauzeugen</a></li>
             <li><a href="#contact">Kontakt</a></li>
-            <li><a href="#galerie">Galerie</a></li>
+            <!-- <li><a href="#galerie">Galerie</a></li> -->
 
 
         </ul>
@@ -29,10 +30,10 @@
             <h1>Lena & Sebastian</h1>
             <br>
             <div>
-                <b>15.06.2024</b>
+                <b style="color: #9ea897 ;">15.06.2024</b>
                 <br>
                 <br>
-                <b>Wir freuen uns sehr, euch zu unserer Hochzeit einladen zu können!</b>
+                <b style="color: #9ea897 ; outline-color: white;">Wir freuen uns sehr, euch zu unserer Hochzeit einladen zu können!</b>
 
             </div>
         </header>
@@ -42,17 +43,17 @@
             <section id="location" class="abschnitt">
                 <h2>Freie Trauung & Feier im Landgut Kemmler in Wankheim</h2>
 
-                <p>Wir freuen uns euch in der <b>Festscheune des Landgut Kemmler in Wankheim</b> bei Tübingen begrüßen
+                <p>Wir freuen uns euch in der <b>Festscheune des Landguts Kemmler in Wankheim</b> bei Tübingen begrüßen
                     zu dürfen! <br> Bitte
                     parkt
                     <b>nicht</b> direkt an der Festscheune, da der Parkplatz für Gäste des Hofcafés reserviert ist.
                 </p>
-                <p>An der Obstwiese gibt es einen Parkplatz, auf dem ihr parken könnt. Ist dieser voll müsst ihr auf
+                <p>Es gibt einen gesonderten Parkplatz, auf dem ihr parken könnt. Ist dieser voll müsst ihr auf
                     Parkplätze im Ort zurück greifen - bitte nicht am Hofcafé parken! Sonst gibt es Ärger &#128521;
-                    <br> Der richtige Parkplatz ist in der Karte in <b>rot</b> eingezeichnet. Von dort gelangt ihr ganz
-                    einfach zur Wiese der freien Trauung (<b>grün</b>) und zur Festscheune (<b>blau</b>).
+                    <br> Der korrekte Parkplatz ist in der Karte in <b>rot</b> eingezeichnet. Von dort gelangt ihr ganz
+                    einfach zur Obstwiese der freien Trauung(<b>grün</b>)und zur Festscheune(<b>blau</b>).
                 </p>
-                <p>Adresse für's Navi (Google Maps):<a href="https://maps.app.goo.gl/myFbRwX2HqXeFuXAA" target="_blank"­><b>Parkplatz Festscheune Wankheim</b></a>  </p>
+                <p>Adresse des Parkplatzes für's Navi (Google Maps):<a href="https://maps.app.goo.gl/myFbRwX2HqXeFuXAA" target="_blank"­><b>Parkplatz Festscheune Wankheim</b></a>  </p>
 
                 <div>
                     <div id="map"></div>
@@ -62,10 +63,10 @@
                             attribution: '© OpenStreetMap contributors'
                         }).addTo(map);
                         L.marker([48.49895, 9.10112], { icon: L.divIcon({ className: 'blue-marker' }) }).addTo(map)
-                            .bindPopup('Festscheune Landgut Kemmler');
+                            .bindPopup('Parkplatz Festscheune Wankheim');
 
                         L.marker([48.49990, 9.10354], { icon: L.divIcon({ className: 'red-marker' }) }).addTo(map)
-                            .bindPopup('Parkplatz Landgut Kemmler')
+                            .bindPopup('Parkplatz Festscheune Wankheim')
                             .openPopup();
 
                         L.marker([48.50083, 9.10491], { icon: L.divIcon({ className: 'green-marker' }) }).addTo(map)
@@ -74,10 +75,19 @@
                 </div>
             </section>
 
+            <section id="adressen" class="abschnitt">
+                <h2>Adressen</h2>
+                <b>Parkplatz Festscheune Wankheim</b>
+                <div>Im Heckenwert</div>
+                <div>72127 Kusterdingen</div>
+                <br>
+                <b>Festscheune Landgut Kemmler</b>
+                <div>Walbenstraße 8</div>
+                <div>72127 Kusterdingen</div>
+            </section>
 
             <section id="ablauf" class="abschnitt">
                 <h2>Unser Tagesablauf</h2>
-                <p>Unser Ablauf am <b>15.06.2024</b>:</p>
             </section>
             <div class="timeline">
                 <div class="outer">
@@ -85,7 +95,7 @@
                         <div class="info">
                             <h2 class="title">15:00 Uhr</h2>
                             <h3 class="title_02"> <a href="https://maps.app.goo.gl/UDSfKetwrPUpsPyE6" style="color: black;text-decoration:none; z-index: 10;" target="_blank"­>Freie Trauung auf der Obstwiese &#128392; </a></h3>
-                            <p> Unsere freie Trauung wird bei schönem Wetter auf einer Obstwiese in Wankheim stattfinden.
+                            <p> Unsere freie Trauung wird auf einer Obstwiese in Wankheim stattfinden.
                                 Die Wegbeschreibung findet ihr unter Locations. Vergesst bei Sonnenschein eure
                                 Sonnebrille
                                 und weiteren Sonnenschutz nicht.</p>
@@ -94,40 +104,38 @@
                     <div class="card">
                         <div class="info">
                             <h2 class="title">16:00 Uhr</h2>
-                            <h3 class="title_02">Sektempfang auf der Obstwiese</h3>
+                            <h3 class="title_02">Sektempfang auf der Obstwiese  &#x1F942</h3>
                             <p>Im Anschluss an die freie Trauung findet der gemeinsame Sektempfang mit Kuchen und Häppchen auf der Obstwiese statt.</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="info">
                             <h2 class="title">17:00 Uhr</h2>
-                            <h3 class="title_02">Gruppenfotos</h3>
-                            <p>Nach dem Sektempfang möchten wir mit euch Gruppenfotos machen, damit dieser besondere Tag auch in Fotos festgehalten wird.</p>
+                            <h3 class="title_02">Gruppenfotos 📸</h3>
+                            <p>Während und nach dem Sektempfang möchten wir mit euch Gruppenfotos machen, damit dieser besondere Tag auch in Fotos festgehalten wird.</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="info">
                             <h2 class="title">18:00 Uhr</h2>
-                            <h3 class="title_02">Eintreffen in der Location</h3>
+                            <h3 class="title_02"><a href="https://maps.app.goo.gl/RwqVTNrKc7MAwdWJ7" style="color: black;text-decoration:none; z-index: 10;" target="_blank"­>Eintreffen in der Location &#128392; </a></h3>
                             <p>Nur 350m von der Trauwiese entfernt befindet sich unsere Location in der wir gemeinsam essen und feiern werden.</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="info">
                             <h2 class="title">18:30 Uhr</h2>
-                            <h3 class="title_02">Abendessen</h3>
+                            <h3 class="title_02">Abendessen 🍽</h3>
                             <p>Unser Catering verwöhnt uns mit leckeren Speisen vom Buffet.</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="info">
-                            <h2 class="title">22:30 Uhr</h2>
-                            <h3 class="title_02">Party Open End</h3>
-                            <p>Nun kann ordentlich gefeiert und getanzt werden! Wir freuen uns auf eine unvergessliche
+                            <h2 class="title">21:00 Uhr</h2>
+                            <h3 class="title_02">Party Open End 💃🕺</h3>
+                            <p>Gut gestärkt können wir nun ordentlich feiern und tanzen! Wir freuen uns auf eine unvergessliche
                                 Party
-                                mit euch! Damit ihr sicher nach Hause kommt wird es einen Shuttle Service nach
-                                Reutlingen
-                                und Umgebung geben.</p>
+                                mit euch! </p>
                         </div>
                     </div>
                 </div>
@@ -135,7 +143,7 @@
 
             <section id="trauzeugen" class="abschnitt">
                 <h2>Trauzeugen</h2>
-                <p>Informationen zu den Trauzeugen...</p>
+                <p>Habt ihr Lust etwas für die Hochzeitsfeier zu organisieren? Bei Ideen oder Fragen könnt ihr euch jederzeit an unsere Trauzeugen wenden.</p>
                 <div class="image-container-trauzeugen">
                     <div class="pic-and-text">
                         <div class="circle-container">
@@ -158,15 +166,24 @@
 
             <section id="contact" class="abschnitt">
                 <h2>Kontakt</h2>
-                <p>Wenn ihr Fragen oder ein anderes Anliegen habt könnt ihr uns jederzeit kontaktieren! </p>
+                <p>Wenn ihr Fragen oder ein anderes Anliegen habt könnt ihr uns gerne kontaktieren! </p>
                 <p>Kontakt Lena &#x2706: <a href="tel: +49 1578 6103407">+49&thinsp;1578&thinsp;6103407</a></p>
                 <p>Kontakt Sebastian &#x2706: <a href="tel: +49 1577 8888907">+49&thinsp;1577&thinsp;8888907</a></p>
+                <br>
+                <p>Unsere Anschrift:</p>
+                <p>Eugenstraße 13</p>
+                <p>72800 Eningen unter Achalm</p>
+
             </section>
 
-            <section id="galerie" class="abschnitt">
+            <!-- <section id="galerie" class="abschnitt">
                 <h2>Galerie</h2>
                 <p>Bilder von der Hochzeit...</p>
-            </section>
+            </section> -->
+
+            <br>
+            <br>
+            <b style="color: #9ea897 ; outline-color: white; font-size:x-large;">Wir freuen uns auf einen tollen Tag mit euch! &#10084;</b>
         </main>
     </div>
 </body>
