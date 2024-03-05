@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2d2d2d;
+    background-color: #9ea897;
     position: sticky;
     top: 0;
     opacity: 100%;
@@ -19,10 +19,6 @@ ul {
 .abschnitt {
     padding-top: 30px; /* Ändern Sie diesen Wert entsprechend der Höhe Ihrer Navigationsleiste */
  }
- 
-.site-container {
-   margin-bottom: 5000px; /* Ändern Sie diesen Wert entsprechend der gewünschten Pixelanzahl */
-}
 
  li {
     float: left;
@@ -44,8 +40,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace, sans-serif;
-    /* background-image: url('Bilder/background_karton.jpg'); */
-    --background-color: rgba(236, 220, 202, 1);
+    --background-color: #e3e4dd;
     background-color: var(--background-color);
 }
 
@@ -162,20 +157,20 @@ main {
 .info {
     display: flex;
     flex-direction: column;
-    background: #333;
-    color: white;
+    background: #d8dfd2;
+    color: black;
     border-radius: 10px;
     padding: 10px;
 }
 
 /* Title of the card */
 .title {
-    color: white;
+    color: black;
     position: relative;
 }
 
 .title_02 {
-    color: white;
+    color: black;
     position: relative;
 }
 
@@ -185,7 +180,7 @@ main {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: white;
+    background: #9ea897;
     border-radius: 999px;
     border: 3px solid black;
 }
@@ -227,7 +222,7 @@ main {
     border-radius: 50%;
     /* Rundet die Ecken, um einen Kreis zu erstellen */
     /* margin: 20px; */
-    background-color: white;
+    background-color: #9ea897;
     border: 3px solid black;
 }
 
